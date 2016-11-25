@@ -12,7 +12,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String welcome(Model model) {
-        model.addAttribute("greeting", "Witaj w przedszkolu! Pozdrowienia od Konrada, Siiiiiiuuuu, asdasdasdasd");
+        model.addAttribute("greeting", "Witaj w przedszkolu! Pozdrowienia od Konrada, Siiiiiiuuuu, blablabla");
         return "welcome";
     }
 }
