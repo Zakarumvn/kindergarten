@@ -1,6 +1,7 @@
 package com.packt.kindergarten.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.persistence.Id;
 import java.util.Date;
 
@@ -8,6 +9,7 @@ import java.util.Date;
  * Created by Zakarum on 2016-12-02.
  */
 @Entity
+@Table(name="grade")
 public class Grade {
     @Id
     private String gradeID;
