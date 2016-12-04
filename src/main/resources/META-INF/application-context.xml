@@ -29,5 +29,5 @@ http://www.springframework.org/schema/data/jpa ">
 	</bean>
 
 	<!-- Jpa Repositories -->
-	<jpa:repositories base-package="com.cloudfoundry.tothought.repositories"></jpa:repositories>
+	<jpa:repositories base-package="com.packt.kindergarten.domain.repository"></jpa:repositories>
 </beans>
