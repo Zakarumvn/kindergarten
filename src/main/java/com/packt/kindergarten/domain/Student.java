@@ -1,12 +1,20 @@
 package com.packt.kindergarten.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import java.util.Date;
 
 /**
  * Created by RM on 2016-11-20.
  */
+@Entity
 public class Student {
+
     private
+    @Id
+    String idStudent;
     String name;
     String surname;
     String pesel;
@@ -17,13 +25,15 @@ public class Student {
     String motherName;
     String nationality;
     String description="";
+    @OneToOne
+    @JoinColumn(name="idGrade")
     Grade grade;
     boolean isStuding=false;
 
     public Student() {
     }
 
-    public Student(String name, String surname, String pesel, Date birthDate, String fatherName, String motherName, String nationality) {
+    public Student(String name, String surname, String pesel, Date birthDate, String fatherName, String motherName, String nationality, String id) {
         this.name = name;
         this.surname = surname;
         this.pesel=pesel;
@@ -31,6 +41,15 @@ public class Student {
         this.fatherName = fatherName;
         this.motherName = motherName;
         this.nationality = nationality;
+        this.idStudent = id;
+    }
+
+    public String getIdStudent() {
+        return idStudent;
+    }
+
+    public void setIdStudent(String idStudent) {
+        this.idStudent = idStudent;
     }
 
     public String getName() {

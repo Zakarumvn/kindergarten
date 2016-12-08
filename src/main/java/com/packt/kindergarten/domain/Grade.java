@@ -1,8 +1,8 @@
 package com.packt.kindergarten.domain;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
@@ -12,9 +12,9 @@ import java.util.Date;
 @Table(name="grade")
 public class Grade {
     @Id
-    private String gradeID;
+    private Long idGrade;
     private Boolean isActive;
-    private Date inaugurationDate;
+    private Date startDate;
     private Date endDate;
     private String gradeName;
 
@@ -22,20 +22,20 @@ public class Grade {
     public Grade() {
     }
 
-    public Grade(String gradeID, Date inaugurationDate, Date endDate, String gradeName) {
-        this.gradeID = gradeID;
+    public Grade(Long gradeID, Date inaugurationDate, Date endDate, String gradeName) {
+        this.idGrade = gradeID;
         this.isActive = true;
-        this.inaugurationDate = inaugurationDate;
+        this.startDate = inaugurationDate;
         this.endDate = endDate;
         this.gradeName = gradeName;
     }
 
-    public String getGradeID() {
-        return gradeID;
+    public Long getIdGrade() {
+        return idGrade;
     }
 
-    public void setGradeID(String gradeID) {
-        this.gradeID = gradeID;
+    public void setIdGrade(Long gradeID) {
+        this.idGrade = gradeID;
     }
 
     public Boolean getActive() {
@@ -46,12 +46,12 @@ public class Grade {
         isActive = active;
     }
 
-    public Date getInaugurationDate() {
-        return inaugurationDate;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setInaugurationDate(Date inaugurationDate) {
-        this.inaugurationDate = inaugurationDate;
+    public void setStartDate(Date inaugurationDate) {
+        this.startDate = inaugurationDate;
     }
 
     public Date getEndDate() {
